@@ -10,7 +10,11 @@ resource "google_compute_instance" "default" {
   machine_type = "machine_type"
   zone         = "${var.zone}"
   labels = {
-    environment = "dev"
+    environment = "dev"       // tags need to be added , all should be in small alphabets //
+    tag         = "value"
+    tag         = "value"
+    tag         = "value"
+    tag         = "value"
   }
 
 
