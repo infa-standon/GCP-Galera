@@ -1,24 +1,38 @@
-variable "name" {
-    default="galera-node-3"
-  }
 
-  variable "disk_name" {
-    default = "galera-disk-3"
-  }
+variable "name" {
+  default = "CT_galera-node"
+}
+
+variable "cluster_size" {
+  default = "3"
+}
+
+variable "disk" {
+  default = "galera-disk"
+}
 
 variable "size" {
-    default=100
-
+  default = 100
 }
 
 variable "zone" {
-default="us-east4-a"
+  default = "us-west1-a"
 }
 
 variable "ssh_key" {
-  default = "file_path"
+  default = "xxxxxxx"
 }
 
 variable "ssh_user" {
   default = "centos"
+}
+
+variable "labels" {
+  type = "map"
+  default = {
+    APPLICATIONROLE = "SERVER"
+    APPLICATIONENV  = "NONPROD"
+    BUSINESSUNIT    = "CLOUDTRUST"
+    ALERTGROUP      = "CT_DB_TEAM"
+  }
 }
